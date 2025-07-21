@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaelytechnology\CmsCore\Console;
+namespace Kaely\CmsCore\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;

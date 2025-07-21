@@ -50,7 +50,7 @@ class CmsCoreServiceProvider extends ServiceProvider
             $this->commands([
                 \Kaely\CmsCore\Console\InstallCmsCore::class,
                 \Kaely\CmsCore\Console\RegisterCmsModule::class,
-                \Kaelytechnology\CmsCore\Console\CopyEnvExample::class,
+                \Kaely\CmsCore\Console\CopyEnvExample::class,
             ]);
         }
 
