@@ -1,3 +1,20 @@
+# Variables de entorno y configuración
+
+Este paquete incluye un archivo `.env.example` con las variables necesarias para su funcionamiento. Al instalar el paquete en tu proyecto, puedes copiar estas variables a tu archivo `.env` ejecutando el siguiente comando Artisan:
+
+```bash
+php artisan cms-core:copy-env
+```
+
+Este comando creará el archivo `.env` (si no existe) con las variables requeridas y comentarios de identificación. Si ya existe un `.env`, el comando no lo sobrescribirá.
+
+También puedes publicar el archivo `.env.example` en tu proyecto con:
+
+```bash
+php artisan vendor:publish --tag=cms-core-env
+```
+
+Recuerda revisar y ajustar los valores de las variables según tu entorno y necesidades.
 # CMS Core
 
 Núcleo del CMS modular basado en API para Laravel 12 que reutiliza la tabla `modules` del `auth-package`.

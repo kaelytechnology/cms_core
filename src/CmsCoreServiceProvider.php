@@ -22,6 +22,11 @@ class CmsCoreServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Publicar .env.example
+        $this->publishes([
+            __DIR__.'/../.env.example' => base_path('vendor/kaelytechnology/cms-core/.env.example'),
+        ], 'cms-core-env');
+    {
         // Configurar Schema para MySQL
         Schema::defaultStringLength(191);
 
@@ -46,6 +51,7 @@ class CmsCoreServiceProvider extends ServiceProvider
             $this->commands([
                 \Kaely\CmsCore\Console\InstallCmsCore::class,
                 \Kaely\CmsCore\Console\RegisterCmsModule::class,
+                \Kaelytechnology\CmsCore\Console\CopyEnvExample::class,
             ]);
         }
 
