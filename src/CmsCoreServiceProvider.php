@@ -26,7 +26,6 @@ class CmsCoreServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../.env.example' => base_path('vendor/kaelytechnology/cms-core/.env.example'),
         ], 'cms-core-env');
-    {
         // Configurar Schema para MySQL
         Schema::defaultStringLength(191);
 
